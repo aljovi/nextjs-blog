@@ -24,8 +24,8 @@ export async function generateStaticParams() {
   const posts = getPosts();
 
   return posts.map(
-    post => {
-      slug: post.slug
+    (post) => {
+      return {slug: post.slug};
     }
   );
 }
